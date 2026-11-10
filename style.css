@@ -1,0 +1,145 @@
+
+/* General page settings */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background-color: #f5f4f0;
+}
+
+/* Header */
+
+.site-header {
+    background-color: #26394a;
+    color: white;
+    padding: 20px 30px;
+}
+
+.site-header h1 {
+    margin: 0 0 15px;
+}
+
+.main-navigation {
+    display: flex;
+    gap: 25px;
+}
+
+.main-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active {
+    text-decoration: underline;
+}
+
+/* Main page layout */
+
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 110px);
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: #e8e6df;
+    border-right: 1px solid #d1d0c9;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+#pavilion-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Map area */
+
+.map-section {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #dce6d8;
+    border: 1px solid #c5d0c0;
+    border-radius: 8px;
+}
+
+.map-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    text-align: center;
+    color: #647b60;
+}
+
+/* Information panel */
+
+.information-panel {
+    width: 260px;
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 1px solid #dedede;
+}
+
+/* Smaller screens */
+
+@media (max-width: 850px) {
+    .main-layout {
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #d1d0c9;
+    }
+
+    .map-section {
+        width: 100%;
+    }
+
+    .information-panel {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #dedede;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-navigation {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .site-header {
+        padding: 18px;
+    }
+
+    .map-container,
+    .map-placeholder {
+        min-height: 400px;
+    }
+}
