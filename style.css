@@ -1,5 +1,15 @@
 
 /* General page settings */
+:root { /*colour palette for website*/
+    --university-blue: #0b113a;
+    --light-blue: #0057ac;
+    --association-green: #52b782;
+    --orange-red: #f04e24;
+    --dark-green: #024244;
+    --pale-blue: #e5f0f8;
+    --white: #ffffff;
+}
+
 
 * {
     box-sizing: border-box;
@@ -15,9 +25,8 @@ body {
 /* Header */
 
 .site-header {
-    background-color: #26394a;
-    color: white;
-    padding: 20px 30px;
+    background-color: var(--university-blue);
+    color: var(--white);
 }
 
 .site-header h1 {
@@ -52,7 +61,7 @@ body {
     width: 250px;
     flex-shrink: 0;
     padding: 20px;
-    background-color: #e8e6df;
+    background-color: var(--pale-blue);
     border-right: 1px solid #d1d0c9;
 }
 
@@ -100,7 +109,7 @@ body {
     width: 260px;
     flex-shrink: 0;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-left: 1px solid #dedede;
 }
 
