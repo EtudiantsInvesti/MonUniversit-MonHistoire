@@ -139,6 +139,65 @@ body {
     outline: 2px solid var(--light-blue);
 }
 
+/* ------------------------------------ */
+/* Floating information popup           */
+/* ------------------------------------ */
+
+.information-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 300px;
+    max-width: calc(100% - 40px);
+
+    padding: 20px;
+
+    background-color: var(--white);
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    z-index: 10;
+}
+
+/* Pavilion information fields */
+
+.pavilion-detail {
+    margin-bottom: 12px;
+}
+
+.pavilion-detail h3,
+.pavilion-description h3 {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: var(--university-blue);
+}
+
+.pavilion-detail p,
+.pavilion-description p {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.pavilion-description {
+    margin-top: 16px;
+}
+
+/* Close button */
+
+.close-information {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+
+    border: none;
+    background: none;
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* Smaller screens */
 
 @media (max-width: 850px) {

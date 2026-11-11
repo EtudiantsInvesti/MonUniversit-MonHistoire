@@ -30,26 +30,53 @@
             </ul>
         </aside>
 
-        <section class="map-section" id="carte">
-            <div class="map-container" id="map">
+     <section class="map-section" id="carte">
+    <div class="map-container" id="map">
 
-                <div class="map-placeholder">
-                    <h2>Carte du campus</h2>
-                    <p>Notre carte illustrée sera intégrée ici.</p>
-                </div>
+        <div class="map-placeholder">
+            <h2>Carte du campus</h2>
+            <p>Notre carte illustrée sera intégrée ici.</p>
+        </div>
 
-                <!-- Interactive map markers will go here later -->
+        <!-- Floating information popup -->
+<aside class="information-popup" id="information-panel" hidden>
 
-            </div>
-        </section>
+    <!-- Close button -->
+    <button
+        type="button"
+        id="close-information"
+        class="close-information"
+        aria-label="Fermer">
+        ×
+    </button>
 
-       <aside class="information-panel" id="information-panel">
-    <h2 id="information-title">À propos</h2>
+    <!-- Pavilion title -->
+    <h2 id="information-title">Titre du pavillon</h2>
 
-    <p id="information-description">
-        Sélectionnez un pavillon pour découvrir son histoire.
-    </p>
+    <!-- Foundation year -->
+    <div class="pavilion-detail">
+        <h3>Année de fondation</h3>
+        <p id="information-year">À déterminer</p>
+    </div>
+
+    <!-- Donor -->
+    <div class="pavilion-detail">
+        <h3>Donateur</h3>
+        <p id="information-donor">À déterminer</p>
+    </div>
+
+    <!-- Relevant historical information -->
+    <div class="pavilion-description">
+        <h3>Informations pertinentes</h3>
+        <p id="information-description">
+            Informations historiques sur le pavillon.
+        </p>
+    </div>
+
 </aside>
+
+    </div>
+</section>
 
 
 
