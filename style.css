@@ -148,64 +148,107 @@ body {
     outline: 2px solid var(--light-blue);
 }
 
-/* ------------------------------------ */
-/* Floating information popup           */
-/* ------------------------------------ */
+
+/* ------------------------------------
+   INFORMATION POPUP
+------------------------------------ */
 
 .information-popup {
     position: absolute;
+
+    /* Position popup inside the map */
     top: 20px;
     right: 20px;
 
-    width: 300px;
+    /* Popup dimensions */
+    width: 420px;
     max-width: calc(100% - 40px);
+    max-height: calc(100% - 40px);
 
-    padding: 20px;
+    /* Allow long descriptions to scroll */
+    overflow-y: auto;
 
-    background-color: var(--white);
+    /* Appearance */
+    background-color: white;
+    color: #0b113a;
+    padding: 25px;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-
+    /* Place above the map */
     z-index: 10;
 }
 
-/* Location information fields */
-
-.location-detail {
-    margin-bottom: 12px;
-}
-
-.location-detail h3,
-.location-description h3 {
-    margin-bottom: 4px;
-    font-size: 14px;
-    color: var(--university-blue);
-}
-
-.location-detail p,
-.location-description p {
+/* Popup title */
+.information-popup h2 {
     margin-top: 0;
-    font-size: 14px;
-}
-
-.location-description {
-    margin-top: 16px;
+    margin-bottom: 20px;
+    padding-right: 25px;
+    color: #0b113a;
 }
 
 /* Close button */
-
 .close-information {
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 12px;
 
-    border: none;
     background: none;
+    border: none;
 
-    font-size: 24px;
+    font-size: 26px;
+    color: #0b113a;
     cursor: pointer;
 }
+
+.close-information:hover {
+    color: #f04e24;
+}
+
+/* Location image */
+.information-image {
+    display: block;
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Location details */
+.location-detail {
+    margin-bottom: 18px;
+}
+
+.location-detail h3,
+.location-description h3,
+.location-sources h3 {
+    margin-bottom: 6px;
+    color: #0057ac;
+    font-size: 16px;
+}
+
+.location-detail p,
+.location-description p,
+.location-sources p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+/* Historical description */
+.location-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Sources and references */
+.location-sources {
+    border-top: 1px solid #e5f0f8;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
 
 /* Smaller screens */
 
