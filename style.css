@@ -249,34 +249,30 @@ body {
     font-size: 14px;
 }
 /*This section is for the layout UI of the timeline when the user scrollls down from the mapn */
+.timeline-section{
+    width: 100%;
+    padding: 40px 20px;
+}
+
 .timeline{
     position: relative;
-    max-width: 120;
+    max-width: 1200;
     margin : 100px auto;
+
+     /* Allows the timeline line to follow page scrolling */
+    view-timeline-name: --timeline;
+    view-timeline-axis: block;
 }
 
 .container{
     padding: 10px 50px;
     position: relative;
     width: 50%;
-    animation: movedown 1s linear forwards;
-    opacity: 0;
+    box-sizing: border-box;
 }
 
-/*yiimng of the animation*/
-@keyframes movedown{
-    0%{
-        opacity: 1;
-        transform: translateY(-30px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-/*display each container once the timeline arrives to it*/
-.container:nth-child(1){
+/*LEGACY CODE display each container once the timeline arrives to it*/
+/*.container:nth-child(1){
     animation-delay: 0s;
 }
 .container:nth-child(2){
@@ -287,11 +283,12 @@ body {
 }
 .container:nth-child(4){
     animation-delay: 3s;
-}
+}*/
 
-.textbox{
+.text-box{
     padding: 20px 30px;
     background: var(--dark-green);
+    color: white;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
@@ -316,17 +313,6 @@ left: 50%;
     left: 50%;
     margin-left: -3px;
     z-index: -1;
-    animation: moveline 6s linear forwards;
-}
-
-/*details for animating the timeline (moveline)*/
-@keyframes moveline{
-    0%{
-        height: 0;
-    }
-    100%{
-        height: 100;
-    }
 }
 
 /*arrows for the timeline to point to textboxes*/
@@ -338,7 +324,7 @@ top:28px;
 z-index: 1;
 border-top: 15px solid transparent;
 border-bottom: 15px solid transparent;
-border-left: 15px solid white;
+border-left: 15px solid var(--university-blue);
 right: -15px;
 }
 
@@ -350,7 +336,7 @@ top:28px;
 z-index: 1;
 border-top: 15px solid transparent;
 border-bottom: 15px solid transparent;
-border-right: 15px solid white;
+border-right: 15px solid var(--university-blue);
 left: -15px;
 }
 
@@ -416,7 +402,7 @@ left: -15px;
         padding-left:80px;
         padding-right:25px;
     }
-    .textbox{
+    .text-box{
         font-size:13px;
     }
     .text-box small{
