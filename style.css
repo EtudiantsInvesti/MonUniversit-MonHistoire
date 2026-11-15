@@ -248,7 +248,120 @@ body {
     padding-top: 15px;
     font-size: 14px;
 }
+/*This section is for the layout UI of the timeline when the user scrollls down from the mapn */
+.timeline{
+    position: relative;
+    max-width: 120;
+    margin : 100px auto;
+}
 
+.container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+/*yiimng of the animation*/
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*display each container once the timeline arrives to it*/
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 1s;
+}
+.container:nth-child(3){
+    animation-delay: 2s;
+}
+.container:nth-child(4){
+    animation-delay: 3s;
+}
+
+.textbox{
+    padding: 20px 30px;
+    background: var(--dark-green);
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-container{
+left: 0;
+}
+
+.right-container{
+left: 50%;
+}
+
+/*actual line of timeline*/
+.timeline::after{
+    content: '';
+    position: absolute;
+    width:6px;
+    height: 100%;
+    background: var(--university-blue);
+    top:0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+/*details for animating the timeline (moveline)*/
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100;
+    }
+}
+
+/*arrows for the timeline to point to textboxes*/
+.left-container-arrow{
+height:0;
+width: 0;
+position: absolute;
+top:28px;
+z-index: 1;
+border-top: 15px solid transparent;
+border-bottom: 15px solid transparent;
+border-left: 15px solid white;
+right: -15px;
+}
+
+.right-container-arrow{
+height:0;
+width: 0;
+position: absolute;
+top:28px;
+z-index: 1;
+border-top: 15px solid transparent;
+border-bottom: 15px solid transparent;
+border-right: 15px solid white;
+left: -15px;
+}
+
+/*adding weight and styling to the textbox of the timeline*/
+.text-box h2{
+    font-weight: 600;
+}
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
 
 /* Smaller screens */
 
@@ -275,6 +388,7 @@ body {
 }
 
 @media (max-width: 500px) {
+    /*adjusting main section for different screens*/
     .main-navigation {
         flex-wrap: wrap;
         gap: 12px;
@@ -284,8 +398,39 @@ body {
         padding: 18px;
     }
 
+    /*adjusting map for different screens*/
     .map-container,
     .map-placeholder {
         min-height: 400px;
+    }
+
+    /*adjusting timeline for different screens*/
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left:31px;
+    }
+    .container{
+        width:100px;
+        padding-left:80px;
+        padding-right:25px;
+    }
+    .textbox{
+        font-size:13px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left:0;
+    }
+    .left-container{
+        right:0;
+    }
+    .left-container-arrow, .right-container-arrow{
+        border-right:15px solid white;
+        border: left 0;
+        left:-15px;
     }
 }
