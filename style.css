@@ -93,7 +93,7 @@ body {
     border-radius: 8px;
 }
 
-.map-placeholder {
+/*.map-placeholder { legacy code 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,6 +101,13 @@ body {
     min-height: 600px;
     text-align: center;
     color: #647b60;
+}*/
+
+.campus-map {
+    width: 100%;
+    height: auto;
+   /* object-fit: contain;*/
+    display: block;
 }
 
 /* Information panel */
