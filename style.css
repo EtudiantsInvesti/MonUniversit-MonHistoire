@@ -110,6 +110,45 @@ body {
     display: block;
 }
 
+/*styling the interaction points on the map*/
+.map-marker {
+   /* position: absolute;
+    top: 30%;
+    left: 40%;*/
+
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+
+    background-color: var(--university-blue);
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/*specific coordinates for the map markers */
+.map-marker[data-location="location-a"] {
+    top: 30%;
+    left: 40%;
+}
+
+.map-marker[data-location="location-b"] {
+    top: 45%;
+    left: 60%;
+}
+
+.map-marker[data-location="location-c"] {
+    top: 55%;
+    left: 35%;
+}
+
+.map-marker:hover {
+    transform: scale(1.15);
+}
+
 /* Information panel */
 
 .information-panel {

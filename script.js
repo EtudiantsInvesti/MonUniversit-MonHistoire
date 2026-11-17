@@ -50,42 +50,42 @@ const locations = [
     },
      {
         id: "location-f",
-        name: "Location F",
+        name: "Place Publique",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
      {
         id: "location-g",
-        name: "Location G",
+        name: "Sous-Terrain",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
      {
         id: "location-h",
-        name: "Location H",
+        name: "Projet Manhattan",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
      {
         id: "location-i",
-        name: "Location I",
+        name: "Carabins",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
      {
         id: "location-j",
-        name: "Location J",
+        name: "Émeute Tramway",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
      {
         id: "location-k",
-        name: "Location K",
+        name: "Carte Rouge",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
@@ -115,7 +115,7 @@ const informationDonor = document.getElementById("information-donor");
 // 3. Display a location's information
 // ------------------------------------
 
-function showLocation(locations) {
+function showLocation(location) {
 
     // Display the pavilion title
     informationTitle.textContent = location.name;
@@ -168,4 +168,31 @@ for (const location of locations) {
 
     // Put the list item inside the sidebar list
     locationList.appendChild(listItem);
+}
+
+// ------------------------------------
+// 5. Connect map markers to locations
+// ------------------------------------
+
+const mapMarkers = document.querySelectorAll(".map-marker");
+
+for (const marker of mapMarkers) {
+
+    marker.addEventListener("click", function() {
+
+        // Get the location ID from the marker
+        const locationId = marker.dataset.location;
+
+        // Find the matching location in our locations array
+        const selectedLocation = locations.find(function(location) {
+            return location.id === locationId;
+        });
+
+        // Display its information
+        if (selectedLocation) {
+            showLocation(selectedLocation);
+        }
+
+    });
+
 }
