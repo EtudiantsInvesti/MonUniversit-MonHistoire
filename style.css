@@ -466,3 +466,21 @@ left: -15px;
         left:-15px;
     }
 }
+
+.Apropos-page {
+    padding: 60px 10%;
+}
+
+.Apropos-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.Apropos-section h1 {
+    margin-bottom: 25px;
+}
+
+.Apropos-section h2 {
+    margin-top: 35px;
+}
