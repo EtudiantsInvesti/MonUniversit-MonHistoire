@@ -16,81 +16,81 @@ const locations = [
     {
         id: "location-a",
         name: "Marie-Victorin",
-        year: "",
+        year: "1958",
         donor: "Nom du donateur",
-        description: "Information historique sur le pavillon A."
+        descriptionFile: "locations/marie-victorin.txt"
     },
     {
         id: "location-b",
         name: "Polytechnique",
         year: "",
         donor: "Nom du donateur",
-        description: "Information historique sur le pavillon B."
+         descriptionFile: "locations/polytechnique.txt"
     },
     {
         id: "location-c",
         name: "Roger-Gaudry",
         year: "",
         donor: "Nom du donateur",
-        description: "Information historique sur le pavillon C."
+         descriptionFile: "locations/roger-gaudry.txt"
     },
-     {
+    {
         id: "location-d",
         name: "Jean-Brillant",
         year: "",
         donor: "Nom du donateur",
-        description: "Information historique sur le pavillon C."
+        descriptionFile: "locations/jean-brillant.txt"
     },
-     {
+    {
         id: "location-e",
         name: "HEC",
         year: "",
         donor: "Nom du donateur",
-        description: "Information historique sur le pavillon C."
+        descriptionFile: "locations/HEC.txt"
     },
-     {
+    {
         id: "location-f",
         name: "Place Publique",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
-     {
+    {
         id: "location-g",
         name: "Sous-Terrain",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
-     {
+    {
         id: "location-h",
         name: "Projet Manhattan",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
-     {
+    {
         id: "location-i",
         name: "Carabins",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
-     {
+    {
         id: "location-j",
         name: "Émeute Tramway",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
-     {
+    {
         id: "location-k",
         name: "Carte Rouge",
         year: "",
         donor: "Nom du donateur",
         description: "Information historique sur le pavillon C."
     },
-     {
+    {
         id: "location-l",
         name: "Location L",
         year: "",
@@ -134,7 +134,7 @@ function showLocation(location) {
 }
 
 // Close the information popup when the X is clicked
-closeInformationButton.addEventListener("click", function() {
+closeInformationButton.addEventListener("click", function () {
     informationPanel.hidden = true;
 });
 
@@ -159,7 +159,7 @@ for (const location of locations) {
     button.classList.add("location-button");
 
     // When clicked, display this pavilion's information
-    button.addEventListener("click", function() {
+    button.addEventListener("click", function () {
         showLocation(location);
     });
 
@@ -178,13 +178,13 @@ const mapMarkers = document.querySelectorAll(".map-marker");
 
 for (const marker of mapMarkers) {
 
-    marker.addEventListener("click", function() {
+    marker.addEventListener("click", function () {
 
         // Get the location ID from the marker
         const locationId = marker.dataset.location;
 
         // Find the matching location in our locations array
-        const selectedLocation = locations.find(function(location) {
+        const selectedLocation = locations.find(function (location) {
             return location.id === locationId;
         });
 
