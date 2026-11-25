@@ -85,8 +85,8 @@ body {
 .map-container {
     position: relative;
     width: 100%;
-    min-height: 600px;
-    height: 100%;
+    min-height: 0;
+    height: auto;
     overflow: hidden;
     background-color: #dce6d8;
     border: 1px solid #c5d0c0;
@@ -112,8 +112,8 @@ body {
 
 /*styling the interaction points on the map*/
 .map-marker {
-   /* position: absolute;
-    top: 30%;
+    position: absolute;
+   /* top: 30%;
     left: 40%;*/
 
     width: 35px;
@@ -121,32 +121,105 @@ body {
     border: 2px solid white;
     border-radius: 50%;
 
-    background-color: var(--university-blue);
+    ;
     color: white;
 
     font-weight: bold;
     cursor: pointer;
     z-index: 5;
+
+    transform: Translate (-50%, -50%);
 }
 
 /*specific coordinates for the map markers */
+/*Marie-victorin*/
 .map-marker[data-location="location-a"] {
-    top: 30%;
-    left: 40%;
+    top: 39%;
+    left: 3%;
+    background-color: var(--university-blue)
 }
 
+/*polytechnique*/
 .map-marker[data-location="location-b"] {
-    top: 45%;
-    left: 60%;
+    top: 36%;
+    left: 38%;
+    background-color: var(--university-blue)
 }
 
+/*Roger-Gaudry*/
 .map-marker[data-location="location-c"] {
+    top: 57%;
+    left: 54%;
+    background-color: var(--university-blue)
+}
+
+/*Lionel-Groulx*/
+.map-marker[data-location="location-d"] {
+    top: 67%;
+    left: 81%;
+    background-color: var(--university-blue)
+}
+
+/*HEC*/
+.map-marker[data-location="location-e"] {
+    top: 74%;
+    left: 94%;
+    background-color: var(--university-blue)
+}
+
+/*Place Public*/
+.map-marker[data-location="location-f"] {
+    top: 57%;
+    left: 80%;
+    background-color: var(--association-green)
+}
+
+/*Sous-Terrain*/
+.map-marker[data-location="location-g"] {
+    top: 59%;
+    left: 68%;
+    background-color: var(--university-blue)
+}
+
+/*Projet Manhattan*/
+.map-marker[data-location="location-h"] {
     top: 55%;
     left: 35%;
+    background-color: var(--orange-red)
 }
+
+/*Attaque Anti-feministe de polytechnique*/
+.map-marker[data-location="location-i"] {
+    top: 35%;
+    left: 45%;
+    background-color: var(--orange-red)
+}
+
+/*installation sur la montagne*/
+.map-marker[data-location="location-j"] {
+    top: 30%;
+    left: 65%;
+    background-color: var(--university-blue)
+}
+
+/*Mobilization etudiant*/
+.map-marker[data-location="location-k"] {
+    top: 45%;
+    left: 30%;
+    background-color: var(--association-green)
+}
+
 
 .map-marker:hover {
     transform: scale(1.15);
+}
+
+/*for the google copyright attribution marker*/
+.map-attribution {
+    font-size: 12px;
+    color: #555;
+    text-align: right;
+    margin: 4px 5px;
 }
 
 /* Information panel */
@@ -518,4 +591,10 @@ left: -15px;
 #information-description {
     white-space: pre-wrap;
     line-height:1.8;
+}
+/*adding space between each source*/
+#information-sources {
+    white-space: pre-wrap;
+    line-height: 1.8;
+    margin-top: 10px;
 }
