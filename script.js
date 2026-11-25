@@ -35,7 +35,7 @@ const locations = [
     {
         id: "location-c",
         name: "Roger-Gaudry",
-        year: "",
+        year: "1943",
          descriptionFile: "locations/roger-gaudry.txt",
         sources: [
             "Archives et gestion de l’information - Université de Montréal. s. d.-a. « Roger Gaudry ».Consulté le 23 novembre 2026.https://archives.umontreal.ca/histoire-de-luniversite/articles-thematiques/personnalites-et-visiteurs/roger-gaudry/.",
@@ -81,7 +81,7 @@ const locations = [
     },
     {
         id: "location-g",
-        name: "Sous-Terrain",
+        name: "Se déplacer sur le campus",
         year: "",
          image: "images/campusescalier.jpg",
          descriptionFile: "locations/sousterrain.txt",
@@ -96,7 +96,7 @@ const locations = [
     },
     {
         id: "location-h",
-        name: "Projet Manhattan",
+        name: "UdeM et la Seconde Guerre Mondiale",
         year: "",
         showInList: false,  //item is events not location
          descriptionFile: "locations/projetManhattan.txt",
@@ -129,11 +129,11 @@ const locations = [
     },
     {
         id: "location-k",
-        name: "Mobilisation Étudiant",
+        name: "Mobilisation Étudiante",
         year: "",
         showInList: false, //item is events not location
         image:"images/carreerouge.jpg",
-         descriptionFile: "locations/mobilisationetudiant.txt",
+        descriptionFile: "locations/mobilisationetudiant.txt",
         sources: [
             "Deland, Maxime, et Daniel Renaud. 2012. « Des vandales saccagent l’Université de Montréal ». Éducation. Journal de Montréal, avril 12. https://www.journaldemontreal.com/2012/04/12/vandalisme-a-luniversite-de-montreal",
             "Poitras, Daniel, et Micheline Cambron. 2023. « Chapitre 32 ». In L’Université de Montréal: une histoire urbaine et internationale. Les Presses de l’Université de Montréal.",
