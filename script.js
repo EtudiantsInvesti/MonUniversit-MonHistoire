@@ -49,7 +49,7 @@ const locations = [
     {
         id: "location-d",
         name: "Lionel-Groulx",
-        year: "",
+        year: "1978",
         descriptionFile: "locations/lionelgroulx.txt",
         sources: [
            "Comité du 75e anniversaire. 2023. Histoire : 75 ans. Département d’histoire de l’Université de Montréal. https://histoire.umontreal.ca/public/FAS/histoire/Images/General/75e_anniversaire.pdf.",
@@ -133,7 +133,7 @@ const locations = [
         year: "",
         showInList: false, //item is events not location
         image:"images/carreerouge.jpg",
-        descriptionFile: "locations/mobilisationetudiant.txt",
+         descriptionFile: "locations/mobilisationetudiant.txt",
         sources: [
             "Deland, Maxime, et Daniel Renaud. 2012. « Des vandales saccagent l’Université de Montréal ». Éducation. Journal de Montréal, avril 12. https://www.journaldemontreal.com/2012/04/12/vandalisme-a-luniversite-de-montreal",
             "Poitras, Daniel, et Micheline Cambron. 2023. « Chapitre 32 ». In L’Université de Montréal: une histoire urbaine et internationale. Les Presses de l’Université de Montréal.",
